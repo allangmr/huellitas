@@ -28,10 +28,10 @@ export default function Product({ product }) {
           </div>
           <div className={styles.productContent}>
             <h1>{product.name}</h1>
-            <div
+            {/* <div
               className={styles.productDescription}
               dangerouslySetInnerHTML={{ __html: product.description?.html }}
-            />
+            /> */}
             <p className={styles.productPrice}>${product.price.toFixed(2)}</p>
             <p className={styles.productBuy}>
               <Button
