@@ -1,9 +1,9 @@
-# Space Jelly Gear Starter
+# Huellitas y Mas
 
-## ⚡️ Quick Start
+## ⚡️ Instalacion
 
 ```bash
-yarn create next-app -e https://github.com/colbyfayock/space-jelly-gear-starter
+yarn create next-app -e https://github.com/allangmr/huellitas
 # or
-npx create-next-app -e https://github.com/colbyfayock/space-jelly-gear-starter
+npx create-next-app -e https://github.com/allangmr/huellitas
 ```
