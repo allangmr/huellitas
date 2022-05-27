@@ -32,7 +32,7 @@ export default function Product({ product }) {
               className={styles.productDescription}
               dangerouslySetInnerHTML={{ __html: product.description?.html }}
             />
-            <p className={styles.productPrice}>${product.price}</p>
+            <p className={styles.productPrice}>${product.price.toFixed(2)}</p>
             <p className={styles.productBuy}>
               <Button
                 className="snipcart-add-item"
