@@ -13,7 +13,8 @@ import { buildImage } from "@lib/cloudinary";
 export default function Home({ home, products }) {
   const { heroTitle, heroText, heroLink, heroBackground } = home;
   const title = "Huellitas y Más";
-  console.log(products, "products");
+  const imageUrl = buildImage(heroBackground.public_id).toURL();
+  console.log(imageUrl, "imageUrl");
   return (
     <Layout>
       <Head>
@@ -31,11 +32,7 @@ export default function Home({ home, products }) {
                 <h2>{heroTitle}</h2>
                 <p>{heroText}</p>
               </div>
-              <img
-                className={styles.heroImage}
-                src={heroBackground.url}
-                alt=""
-              />
+              <img className={styles.heroImage} src={imageUrl} alt="" />
             </a>
           </Link>
         </div>
