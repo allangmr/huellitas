@@ -10,7 +10,6 @@ import styles from "@styles/Page.module.scss";
 import Map from "@components/Map";
 import center from "@turf/center";
 import { points } from "@turf/helpers";
-const position = [51.505, -0.09];
 export default function Stores({ storeLocations }) {
   const features = points(
     storeLocations.map(({ location }) => {

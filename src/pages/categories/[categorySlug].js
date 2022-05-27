@@ -5,6 +5,7 @@ import Header from "@components/Header";
 import Container from "@components/Container";
 import Button from "@components/Button";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import { useEffect, useState } from "react";
 
 import { buildImage } from "@lib/cloudinary";
 
@@ -25,21 +26,17 @@ export default function Category({ category, products }) {
 
         <ul className={styles.products}>
           {products.map((product) => {
+            const [image, setImage] = useState();
             const imageUrl = buildImage(product.image.public_id)
               .resize("w_800,h_1000")
               .toURL();
+            useEffect(() => setImage(imageUrl), []);
             return (
               <li key={product.id}>
                 <Link href={`/products/${product.slug}`}>
                   <a>
                     <div className={styles.productImage}>
-                      <img
-                        width="800"
-                        height="1000"
-                        className={styles.heroImage}
-                        src={imageUrl}
-                        alt=""
-                      />
+                      <img className={styles.heroImage} src={image} alt="" />
                     </div>
                     <h3 className={styles.productTitle}>{product.name}</h3>
                     <p className={styles.productPrice}>

@@ -79,6 +79,11 @@
 .heroImage {
   @media (max-width: 720px) {
     order: 1;
+  }
+}
+
+.heroBackground {
+  @media (max-width: 720px) {
     display: none;
   }
 }
