@@ -14,12 +14,11 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        {/* publicApiKey: "${process.env.NEXT_PUBLIC_SNIPCART_API_KEY}", */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
             window.SnipcartSettings = {
-                publicApiKey: "MDZkZTQ3MjUtMjI4Mi00MTE5LWE4NDMtMTA5NTBhMDAwZTA3NjM3ODkyMTc2NjcwNzMxNjA1",
+                publicApiKey: "${process.env.NEXT_PUBLIC_SNIPCART_API_KEY}", 
                 loadStrategy: "on-user-interaction",
                 modalStyle: "side",
             };
